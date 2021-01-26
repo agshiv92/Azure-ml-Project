@@ -1,14 +1,14 @@
 # Optimizing an ML Pipeline in Azure
 
 ## Overview
-This project is part of the Udacity Azure ML Nanodegree.
-In this project, we build and optimize an Azure ML pipeline using the Python SDK and a provided Scikit-learn model.
-This model is then compared to an Azure AutoML run.
+In this project, we are making and optimizing an Azure ML pipeline using the Python SDK and a provided SK learn model.
+The end task is to compare the manual model with Azure AutoML run.
 
 ## Summary
-The data set contains data related to a direct marketing campaigns of a financial institution. The problem setting is a binary classification where our project goal is to predict whether a client will subscribe a term deposit (that is outcome variable y). In the original dataset we have 17 possible predictor variables, both numeric and categorical ones.
+The data set contains information about the financial institution's direct marketing campaigns. Problem planning is a binary split where our project goal is to predict whether the client will pay a term deposit (those are variable results y). In the original database we have about 17 prediction variables, both numerical and catagorical.
 
-During the project we would like to predict whether a given client with a set of previously known attributes (set of inputs) would or would not subscribe a term deposit.
+
+During the project we would like to predict whether a given client with a pre-defined token collection (input group) will pay or will not register.
 
 We would construct a default Ml pipeline for that with the basic steps of:
 
@@ -36,14 +36,11 @@ The optimization policy defines the early termination strategy of the executed r
 ## AutoML
 We compared our previous models to a more-or-less fully automated autoML run. During that no preprocessing step is necessary, thus we just defined the task tpye, set some config parameters and referenced the train and validation datasets which were made available to our workspace in a previous step.
 
-After the execution the job, it resulted in VotingEnsemble as the best performing model, based on the validation set. As in the previous experiments we downloaded the resulting model and evaluated it on the held-out test set. The VotingEnsemble model can be considered as a meta-model or a model-of models, since it combines the predictions from multiple other models.
+After the execution the job, it resulted that there is no significant difference between manual and Auto ML based on the validation set. Auto ML can save a huge amount of time with trade of little accuracy
 
 ## Pipeline comparison
-**Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
+There is very little difference between the accuracy of model. Althoug the manual is performing better in terms of accuracy but there is very little difference between two
 
 ## Future work
-**What are some areas of improvement for future experiments? Why might these improvements help the model?**
+Yes we can different model and different run. We can also change the estimator
 
-## Proof of cluster clean up
-**If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section.**
-**Image of cluster marked for deletion**
