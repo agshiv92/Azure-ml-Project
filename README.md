@@ -6,9 +6,16 @@ In this project, we build and optimize an Azure ML pipeline using the Python SDK
 This model is then compared to an Azure AutoML run.
 
 ## Summary
-**In 1-2 sentences, explain the problem statement: e.g "This dataset contains data about... we seek to predict..."**
+The data set contains data related to a direct marketing campaigns of a financial institution. The problem setting is a binary classification where our project goal is to predict whether a client will subscribe a term deposit (that is outcome variable y). In the original dataset we have 17 possible predictor variables, both numeric and categorical ones.
 
-**In 1-2 sentences, explain the solution: e.g. "The best performing model was a ..."**
+During the project we would like to predict whether a given client with a set of previously known attributes (set of inputs) would or would not subscribe a term deposit.
+
+We would construct a default Ml pipeline for that with the basic steps of:
+
+Data cleaning and preparation
+Model building - including optimizing the hyperparameters as well (on a test/valid set).
+Model performance evaluation step on a held-out-set.
+Thus we would use all the 3 part of the dataset namely the train / test / validation sets for different purposes. We show how to set up the above pipeline from a jupyter-notebook and execute it through the Azure ML studio. For the hyperparameter tuning part we use Hyperdrive functionality of the ML-studio.
 
 ## Scikit-learn Pipeline
 **Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
