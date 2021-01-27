@@ -47,6 +47,8 @@ The Ensemble consist of two models, namely XGBoostClassifier and SGDClassifier, 
 
 ## Pipeline comparison
 There is very little difference between the accuracy of model. Althoug the manual is performing better in terms of accuracy but there is very little difference between two different model
+Hyperdrive - lgbm: 0.911
+AutoML - VotingEnsemble: 0.917
 
 ## Future work
 Yes we can different model and different run. We can also change the estimator. But the most important thing we can do is feature engineering based on the domain knowledge. This will help us to generate more columns. Now Auto ML can take these columns and gives better performance
