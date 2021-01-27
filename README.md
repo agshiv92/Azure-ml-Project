@@ -32,9 +32,11 @@ The optimization policy defines the early termination strategy of the executed r
 *num_leaves: max number of leaves in one tree
 *min_data_in_leaf: minimal number of data in one leaf
 *num_iterations: number of boosting rounds
+We are using Bandit policy for early termination
 
 We are using RandomParameterSampling because we can greatly reduce computation costs and speedup up the exploration of the parameter space.
 Given the low dimensionality of the UCI Bank Marketing dataset, and the small number of hyperparameter to tune random sampling is a better choice w.r.t. GridSearch
+Random sampling support both continuous and discrete hyperparameters. Random sampling also terminate early the low perfomance run. 
 
 ## AutoML
 We compared our previous models to a more-or-less fully automated autoML run. During that no preprocessing step is necessary, thus we just defined the task tpye, set some config parameters and referenced the train and validation datasets which were made available to our workspace in a previous step.
